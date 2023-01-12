@@ -1,4 +1,4 @@
-package com.uniyaz.sakila.rest;
+package com.uniyaz.sakila.rest.country;
 
 import com.uniyaz.sakila.core.country.*;
 import org.springframework.beans.factory.annotation.Autowired;

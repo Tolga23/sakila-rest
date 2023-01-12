@@ -1,4 +1,4 @@
-package com.uniyaz.sakila.rest;
+package com.uniyaz.sakila.rest.actor;
 
 import com.uniyaz.sakila.core.actor.Actor;
 import com.uniyaz.sakila.core.actor.ActorConverter;
