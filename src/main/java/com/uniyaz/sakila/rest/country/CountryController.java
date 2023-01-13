@@ -1,9 +1,11 @@
 package com.uniyaz.sakila.rest.country;
 
 import com.uniyaz.sakila.core.country.*;
+import com.uniyaz.sakila.core.country.domain.Country;
+import com.uniyaz.sakila.core.country.dto.CountryCityCountDto;
+import com.uniyaz.sakila.core.country.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,6 +28,7 @@ public class CountryController {
         return countryService.findAll();
     }
 
+
     @GetMapping(path = "findAllByName")
     public ResponseEntity findAllCountry(String name) {
 
@@ -38,6 +41,13 @@ public class CountryController {
             ResponseEntity responseEntity = new ResponseEntity(HttpStatus.NO_CONTENT);
             return responseEntity;
         }
+    }
+
+    @GetMapping(path = "findCountryCityCountDto")
+    public ResponseEntity findCountryCityCountDto(){
+        List<CountryCityCountDto> countryCityCountDtoList = countryService.findCountryCityCountDto();
+        ResponseEntity responseEntity = new ResponseEntity(countryCityCountDtoList,HttpStatus.OK);
+        return responseEntity;
     }
 
     @GetMapping(path = "findById/{id}")

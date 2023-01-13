@@ -1,5 +1,6 @@
 package com.uniyaz.sakila.core.actor;
 
+import com.uniyaz.sakila.rest.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -7,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ActorService {
+public class ActorService extends BaseService {
 
     @Autowired
     ActorDao actorDao;

@@ -4,8 +4,8 @@ import com.uniyaz.sakila.core.city.domain.City;
 import com.uniyaz.sakila.core.city.dao.CityDao;
 import com.uniyaz.sakila.core.city.dto.CityCascadeSaveRequestDto;
 import com.uniyaz.sakila.core.city.dto.CitySaveRequestDto;
-import com.uniyaz.sakila.core.country.Country;
-import com.uniyaz.sakila.core.country.CountryService;
+import com.uniyaz.sakila.core.country.domain.Country;
+import com.uniyaz.sakila.core.country.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

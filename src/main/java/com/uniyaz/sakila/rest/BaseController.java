@@ -10,32 +10,26 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/api")
-public abstract class BaseController{
+public abstract class BaseController<T extends BaseEntity,S extends BaseService>{
 
 
-   /* @Autowired
-    protected BaseService baseService;
+    @Autowired
+    S service;
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Object> findById(@PathVariable("id") Long id) {
-        return new ResponseEntity<>(baseService.findById(id), HttpStatus.OK);
+    @GetMapping(path = "/findAll")
+    public List<T> findAll() {
+        List<T> entityList = service.findAll();
+        return entityList;
     }
 
-    @PostMapping
-    public ResponseEntity<Object> create(@RequestBody Object object) {
-        return new ResponseEntity<>(baseService.create(object), HttpStatus.CREATED);
+    @PostMapping(path = "/save", consumes = "application/json")
+    public T save(@RequestBody T entity) {
+        return (T) service.save(entity);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Object> update(@PathVariable("id") Long id, @RequestBody Object object) {
-        return new ResponseEntity<>(baseService.update(id, object), HttpStatus.OK);
+    @DeleteMapping(path = "/delete")
+    public void delete(@RequestParam Long entityId) {
+        service.delete(entityId);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable("id") Long id) {
-        baseService.delete(id);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }*/
 }

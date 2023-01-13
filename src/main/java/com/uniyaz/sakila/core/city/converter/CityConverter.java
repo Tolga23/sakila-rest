@@ -2,7 +2,7 @@ package com.uniyaz.sakila.core.city.converter;
 
 import com.uniyaz.sakila.core.city.domain.City;
 import com.uniyaz.sakila.core.city.dto.CityDto;
-import com.uniyaz.sakila.core.country.Country;
+import com.uniyaz.sakila.core.country.domain.Country;
 import com.uniyaz.sakila.core.country.CountryConverter;
 import com.uniyaz.sakila.core.country.CountryDto;
 import org.springframework.beans.factory.annotation.Autowired;

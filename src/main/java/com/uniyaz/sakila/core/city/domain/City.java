@@ -1,7 +1,7 @@
 package com.uniyaz.sakila.core.city.domain;
 
 import com.uniyaz.sakila.core.common.BaseEntity;
-import com.uniyaz.sakila.core.country.Country;
+import com.uniyaz.sakila.core.country.domain.Country;
 import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
