@@ -1,14 +1,14 @@
 package com.uniyaz.sakila.core.city.dao;
 
 import com.uniyaz.sakila.core.city.domain.City;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.uniyaz.sakila.core.common.BaseDao;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface CityDao extends JpaRepository<City, Long> {
+public interface CityDao extends BaseDao<City> {
 
     @Query(
             "Select             city " +

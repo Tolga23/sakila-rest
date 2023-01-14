@@ -1,17 +1,11 @@
-package com.uniyaz.sakila.rest;
+package com.uniyaz.sakila.core.common;
 
-
-import com.uniyaz.sakila.core.common.BaseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 public abstract class BaseController<T extends BaseEntity,S extends BaseService>{
-
 
     @Autowired
     S service;
@@ -31,5 +25,7 @@ public abstract class BaseController<T extends BaseEntity,S extends BaseService>
     public void delete(@RequestParam Long entityId) {
         service.delete(entityId);
     }
+
+
 
 }

@@ -1,8 +1,8 @@
 package com.uniyaz.sakila.core.country.dao;
 
+import com.uniyaz.sakila.core.common.BaseDao;
 import com.uniyaz.sakila.core.country.domain.Country;
 import com.uniyaz.sakila.core.country.dto.CountryCityCountDto;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface CountryDao extends JpaRepository<Country, Long> {
+public interface CountryDao extends BaseDao<Country> {
 
 
 

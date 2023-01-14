@@ -1,5 +1,6 @@
 package com.uniyaz.sakila.rest.country;
 
+import com.uniyaz.sakila.core.common.BaseController;
 import com.uniyaz.sakila.core.country.*;
 import com.uniyaz.sakila.core.country.domain.Country;
 import com.uniyaz.sakila.core.country.dto.CountryCityCountDto;
@@ -14,7 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "country")
-public class CountryController {
+public class CountryController extends BaseController<Country,CountryService> {
 
     @Autowired
     CountryService countryService;
@@ -22,12 +23,10 @@ public class CountryController {
     @Autowired
     CountryConverter countryConverter;
 
-
     @GetMapping(path = "findAll")
     public List<Country> findAllCountry() {
         return countryService.findAll();
     }
-
 
     @GetMapping(path = "findAllByName")
     public ResponseEntity findAllCountry(String name) {
@@ -54,21 +53,5 @@ public class CountryController {
     public Optional<Country> findById(@PathVariable Long id){
         return countryService.findCountryById(id);
     }
-
-    @PostMapping
-    public Country addCountry(@RequestBody Country country){
-        return countryService.addCountry(country);
-    }
-
-    @DeleteMapping(path = "deleteById")
-    public void deleteById(Long id){
-        countryService.deleteCountry(id);
-    }
-
-    @DeleteMapping(path = "deleteById/{id}")
-    public void deleteByIdPathVariable(@PathVariable Long id){
-        countryService.deleteCountry(id);
-    }
-
 
 }

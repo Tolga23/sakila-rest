@@ -25,8 +25,7 @@ public class City extends BaseEntity {
     private Date lastUpdate;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
-    @JoinColumn(name = "country_id")
-    @org.hibernate.annotations.ForeignKey(name = "fk_city_country")
+    @JoinColumn(name = "country_id",foreignKey = @ForeignKey(name = "fk_city_country"))
     private Country country;
 
     @Override

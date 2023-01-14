@@ -1,7 +1,6 @@
 package com.uniyaz.sakila.core.city.dto;
 
 import com.uniyaz.sakila.core.country.CountryDto;
-import org.springframework.stereotype.Repository;
 
 public class CityDto{
 

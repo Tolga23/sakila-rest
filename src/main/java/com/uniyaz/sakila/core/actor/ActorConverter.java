@@ -8,7 +8,6 @@ import java.util.List;
 @Component
 public class ActorConverter {
 
-
     public ActorDto convertToActorDto(Actor actor) {
 
         ActorDto actorDto = new ActorDto();
@@ -29,4 +28,5 @@ public class ActorConverter {
 
         return actorDtoList;
     }
+
 }
