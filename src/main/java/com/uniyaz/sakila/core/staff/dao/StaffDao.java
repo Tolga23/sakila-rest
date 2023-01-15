@@ -1,7 +1,7 @@
-package com.uniyaz.sakila.staff.dao;
+package com.uniyaz.sakila.core.staff.dao;
 
 import com.uniyaz.sakila.core.common.BaseDao;
-import com.uniyaz.sakila.staff.domain.Staff;
+import com.uniyaz.sakila.core.staff.domain.Staff;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 

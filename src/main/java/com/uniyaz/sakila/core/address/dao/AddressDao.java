@@ -1,6 +1,6 @@
-package com.uniyaz.sakila.address.dao;
+package com.uniyaz.sakila.core.address.dao;
 
-import com.uniyaz.sakila.address.domain.Address;
+import com.uniyaz.sakila.core.address.domain.Address;
 import com.uniyaz.sakila.core.common.BaseDao;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

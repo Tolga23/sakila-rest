@@ -1,8 +1,8 @@
 package com.uniyaz.sakila.core.store.domain;
 
-import com.uniyaz.sakila.address.domain.Address;
+import com.uniyaz.sakila.core.address.domain.Address;
 import com.uniyaz.sakila.core.common.BaseEntity;
-import com.uniyaz.sakila.staff.domain.Staff;
+import com.uniyaz.sakila.core.staff.domain.Staff;
 import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
@@ -36,19 +36,19 @@ public class Store extends BaseEntity {
         this.id = id;
     }
 
-    public Staff getManagerStaffId() {
+    public Staff getManagerStaff() {
         return staff;
     }
 
-    public void setManagerStaffId(Staff staff) {
+    public void setManagerStaff(Staff staff) {
         this.staff = staff;
     }
 
-    public Address getAddressId() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddressId(Address address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 

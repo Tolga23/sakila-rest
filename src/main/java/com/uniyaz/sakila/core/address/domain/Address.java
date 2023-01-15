@@ -1,4 +1,4 @@
-package com.uniyaz.sakila.address.domain;
+package com.uniyaz.sakila.core.address.domain;
 
 import com.uniyaz.sakila.core.city.domain.City;
 import com.uniyaz.sakila.core.common.BaseEntity;

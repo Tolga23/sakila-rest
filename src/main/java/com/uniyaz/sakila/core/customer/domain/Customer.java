@@ -1,6 +1,6 @@
 package com.uniyaz.sakila.core.customer.domain;
 
-import com.uniyaz.sakila.address.domain.Address;
+import com.uniyaz.sakila.core.address.domain.Address;
 import com.uniyaz.sakila.core.common.BaseEntity;
 import com.uniyaz.sakila.core.store.domain.Store;
 import org.hibernate.envers.Audited;

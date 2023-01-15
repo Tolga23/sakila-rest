@@ -1,6 +1,6 @@
-package com.uniyaz.sakila.staff.domain;
+package com.uniyaz.sakila.core.staff.domain;
 
-import com.uniyaz.sakila.address.domain.Address;
+import com.uniyaz.sakila.core.address.domain.Address;
 import com.uniyaz.sakila.core.common.BaseEntity;
 import com.uniyaz.sakila.core.store.domain.Store;
 import org.hibernate.envers.Audited;
@@ -73,11 +73,11 @@ public class Staff extends BaseEntity {
         this.lastName = lastName;
     }
 
-    public Address getAddressId() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddressId(Address address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 
@@ -97,11 +97,11 @@ public class Staff extends BaseEntity {
         this.email = email;
     }
 
-    public Store getStoreId() {
+    public Store getStore() {
         return store;
     }
 
-    public void setStoreId(Store store) {
+    public void setStore(Store store) {
         this.store = store;
     }
 

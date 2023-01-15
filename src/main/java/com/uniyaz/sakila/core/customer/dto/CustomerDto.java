@@ -1,6 +1,6 @@
 package com.uniyaz.sakila.core.customer.dto;
 
-import com.uniyaz.sakila.address.domain.Address;
+import com.uniyaz.sakila.core.address.domain.Address;
 import com.uniyaz.sakila.core.store.domain.Store;
 
 public class CustomerDto {
