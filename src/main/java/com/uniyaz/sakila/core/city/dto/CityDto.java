@@ -1,6 +1,6 @@
 package com.uniyaz.sakila.core.city.dto;
 
-import com.uniyaz.sakila.core.country.CountryDto;
+import com.uniyaz.sakila.core.country.dto.CountryDto;
 
 public class CityDto{
 

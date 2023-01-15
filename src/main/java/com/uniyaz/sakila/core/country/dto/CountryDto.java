@@ -1,4 +1,4 @@
-package com.uniyaz.sakila.core.country;
+package com.uniyaz.sakila.core.country.dto;
 
 public class CountryDto {
 

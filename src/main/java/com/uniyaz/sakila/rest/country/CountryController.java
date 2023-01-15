@@ -4,6 +4,7 @@ import com.uniyaz.sakila.core.common.BaseController;
 import com.uniyaz.sakila.core.country.*;
 import com.uniyaz.sakila.core.country.domain.Country;
 import com.uniyaz.sakila.core.country.dto.CountryCityCountDto;
+import com.uniyaz.sakila.core.country.dto.CountryDto;
 import com.uniyaz.sakila.core.country.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,11 +23,6 @@ public class CountryController extends BaseController<Country,CountryService> {
 
     @Autowired
     CountryConverter countryConverter;
-
-    @GetMapping(path = "findAll")
-    public List<Country> findAllCountry() {
-        return countryService.findAll();
-    }
 
     @GetMapping(path = "findAllByName")
     public ResponseEntity findAllCountry(String name) {

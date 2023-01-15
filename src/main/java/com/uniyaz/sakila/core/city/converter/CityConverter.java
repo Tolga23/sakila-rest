@@ -5,7 +5,7 @@ import com.uniyaz.sakila.core.city.dto.CityDto;
 import com.uniyaz.sakila.core.city.dto.CitytoCountryFinderDto;
 import com.uniyaz.sakila.core.country.domain.Country;
 import com.uniyaz.sakila.core.country.CountryConverter;
-import com.uniyaz.sakila.core.country.CountryDto;
+import com.uniyaz.sakila.core.country.dto.CountryDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
