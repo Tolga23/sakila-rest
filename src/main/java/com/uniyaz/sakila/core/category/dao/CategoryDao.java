@@ -12,5 +12,10 @@ import java.util.List;
 public interface CategoryDao extends BaseDao<Category> {
 
     @Query("Select category from Category category where category.name = :categoryName")
-    public List<Category> findCategoryByName(@Param("categoryName") String categoryName);
+    List<Category> findCategoryByName(@Param("categoryName") String categoryName);
+
+    @Query("select category from Category category, Film film " +
+            "where category.name = :categoryName")
+    List<Category> findFilmsByCategoryName(@Param("categoryName") String categoryName);
+
 }

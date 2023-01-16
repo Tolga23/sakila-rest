@@ -16,4 +16,6 @@ public class CategoryService extends BaseService<Category, CategoryDao> {
     public List<Category> findCategoryByName(String name){
         return categoryDao.findCategoryByName(name);
     }
+
+    public List<Category> findFilmsByCategoryName(String name) { return categoryDao.findFilmsByCategoryName(name);}
 }

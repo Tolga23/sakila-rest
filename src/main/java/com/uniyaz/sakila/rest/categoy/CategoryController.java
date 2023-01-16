@@ -3,6 +3,7 @@ package com.uniyaz.sakila.rest.categoy;
 import com.uniyaz.sakila.core.category.CategoryConverter;
 import com.uniyaz.sakila.core.category.domain.Category;
 import com.uniyaz.sakila.core.category.dto.CategoryDto;
+import com.uniyaz.sakila.core.category.dto.CategoryFilmDto;
 import com.uniyaz.sakila.core.category.service.CategoryService;
 import com.uniyaz.sakila.core.common.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,15 @@ public class CategoryController extends BaseController<Category, CategoryService
         List<CategoryDto> categoryDtos = categoryConverter.convertCategoryDtoList(categoryList);
 
         if (!categoryDtos.isEmpty()) return new ResponseEntity(categoryDtos, HttpStatus.OK);
+        else return new ResponseEntity(HttpStatus.NO_CONTENT);
+    }
+
+    @GetMapping(path = "categoryFilm")
+    public ResponseEntity findFilmByCategory(String categoryName){
+        List<Category> categoryList = categoryService.findFilmsByCategoryName(categoryName);
+        List<CategoryFilmDto> categoryFilmDtoList = categoryConverter.convertCategoryFilm(categoryList);
+
+        if (!categoryFilmDtoList.isEmpty())return new ResponseEntity(categoryFilmDtoList,HttpStatus.OK);
         else return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
 
