@@ -1,47 +1,70 @@
 package com.uniyaz.sakila.core.customer.dto;
 
-import com.uniyaz.sakila.core.address.domain.Address;
-import com.uniyaz.sakila.core.store.domain.Store;
 
 public class CustomerDto {
 
-    private Long id;
-    private String firstName;
+    private String firstNameCustomer;
+    private String lastNameCustomer;
+    private String mailCustomer;
+    private String address;
+    private String district;
+    private String city;
+    private String country;
 
-    private Address addressId;
 
-    private Store storeId;
-
-    public Long getId() {
-        return id;
+    public String getFirstNameCustomer() {
+        return firstNameCustomer;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setFirstNameCustomer(String firstNameCustomer) {
+        this.firstNameCustomer = firstNameCustomer;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getLastNameCustomer() {
+        return lastNameCustomer;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setLastNameCustomer(String lastNameCustomer) {
+        this.lastNameCustomer = lastNameCustomer;
     }
 
-    public Address getAddressId() {
-        return addressId;
+    public String getMailCustomer() {
+        return mailCustomer;
     }
 
-    public void setAddressId(Address addressId) {
-        this.addressId = addressId;
+    public String getAddress() {
+        return address;
     }
 
-    public Store getStoreId() {
-        return storeId;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public void setStoreId(Store storeId) {
-        this.storeId = storeId;
+    public String getDistrict() {
+        return district;
     }
 
+    public void setDistrict(String district) {
+        this.district = district;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public void setMailCustomer(String emailCustomer) {
+        this.mailCustomer = emailCustomer;
+    }
 }

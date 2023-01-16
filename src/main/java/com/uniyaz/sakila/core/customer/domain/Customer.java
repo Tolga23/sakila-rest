@@ -17,7 +17,7 @@ public class Customer extends BaseEntity {
     @Column(name = "customer_id")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.MERGE)
     @JoinColumn(name = "store_id",foreignKey = @ForeignKey(name = "fk_customer_store"))
     private Store store;
 
@@ -30,7 +30,7 @@ public class Customer extends BaseEntity {
     @Column(name = "email")
     private String email;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.MERGE)
     @JoinColumn(name = "address_id",foreignKey = @ForeignKey(name = "fk_customer_address"))
     private Address address;
 

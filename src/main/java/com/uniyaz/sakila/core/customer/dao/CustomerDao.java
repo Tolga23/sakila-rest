@@ -14,6 +14,9 @@ public interface CustomerDao extends BaseDao<Customer> {
             "Left join fetch customer.store store " +
             "left join fetch customer.address address " +
             "left join fetch address.city city " +
-            "left join fetch city.country country")
+            "left join fetch city.country country " +
+            "left join fetch store.address address2 " +
+            "left join fetch address2.city city2 " +
+            "left join fetch city2.country country2")
     List<Customer> findAll();
 }
