@@ -11,6 +11,8 @@ public class FilmActorConverter {
         FilmActorDto filmActorDto = new FilmActorDto();
         filmActorDto.setId(filmActor.getId());
         filmActorDto.setFirstName(filmActor.getActor().getFirstName());
-        filmActorDto.setActorCount(filmActor.);
+        filmActorDto.setActorCount(filmActor.getActor().getId());
+
+        return filmActorDto;
     }
 }
