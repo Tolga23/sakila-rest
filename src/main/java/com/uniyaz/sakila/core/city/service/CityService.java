@@ -24,7 +24,7 @@ public class CityService extends BaseService<City,CityDao> {
 
     public City saveCityWithDto(CitySaveRequestDto citySaveRequestDto){
         Long countryId = citySaveRequestDto.getCountryId();
-        Country country = countryService.findCountryById(countryId).get();
+        Country country = countryService.findCountryById(countryId);
         String cityName = citySaveRequestDto.getName();
 
       //  Country country = new Country();

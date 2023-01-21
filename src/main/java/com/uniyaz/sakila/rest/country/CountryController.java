@@ -46,7 +46,7 @@ public class CountryController extends BaseController<Country,CountryService> {
     }
 
     @GetMapping(path = "findById/{id}")
-    public Optional<Country> findById(@PathVariable Long id){
+    public Country findById(@PathVariable Long id){
         return countryService.findCountryById(id);
     }
 

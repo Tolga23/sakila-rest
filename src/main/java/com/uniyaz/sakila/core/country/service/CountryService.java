@@ -1,6 +1,7 @@
 package com.uniyaz.sakila.core.country.service;
 
 import com.uniyaz.sakila.core.common.BaseService;
+import com.uniyaz.sakila.core.common.exception.NotFoundException;
 import com.uniyaz.sakila.core.country.dao.CountryDao;
 import com.uniyaz.sakila.core.country.domain.Country;
 import com.uniyaz.sakila.core.country.dto.CountryCityCountDto;
@@ -24,9 +25,10 @@ public class CountryService extends BaseService<Country, CountryDao> {
         return countryDao.findAllByName(countryName);
     }
 
-    public Optional<Country> findCountryById(Long countryId) {
-        return countryDao.findById(countryId);
+    public Country findCountryById(Long countryId) {
+        return countryDao.findById(countryId)
+                .orElseThrow(
+                () -> new NotFoundException("Country could not find by id: " + countryId)) ;
     }
-
 
 }
